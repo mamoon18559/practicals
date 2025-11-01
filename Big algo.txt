@@ -1,0 +1,210 @@
+Steps:
+1. Importing Libraries and Dataset
+○ Essential Python libraries such as pandas, numpy, matplotlib, and seaborn were
+imported for data manipulation and visualization.
+○ The Breast Cancer dataset was loaded for analysis and model training.
+2. Exploratory Data Analysis (EDA)
+○ Basic information about the dataset (such as number of rows, columns, and data
+types) was examined.
+○ Summary statistics were generated to understand the distribution and central
+tendencies of each feature.
+○ Initial visualizations (e.g., histograms, boxplots) were created to identify data
+patterns and anomalies.
+3. Handling Missing Values
+○ The dataset was scanned for null or missing entries.
+○ Missing data were treated using appropriate imputation techniques, such as
+replacing with mean, median, or mode, depending on the feature's distribution.
+4. Encoding Categorical Data
+○ Categorical variables were identified and transformed into numerical form using
+encoding techniques.
+○ Label encoding or one-hot encoding was applied to ensure compatibility with
+machine learning algorithms.
+5. Analyzing Correlation
+○ A correlation matrix was generated to identify the strength and direction of
+relationships between features.
+○ A heatmap was visualized to detect multicollinearity and assess which features
+are strongly associated with the target variable.
+6. Splitting the Dataset
+○ The dataset was divided into training and testing sets, typically in an 80:20 ratio.
+○ This step ensures that model performance can be evaluated on unseen data.
+7. Feature Scaling
+○ Numerical features were standardized to ensure that all features contribute equally
+to the model.
+○ Techniques like StandardScaler (z-score normalization) were used to scale data
+within a similar range.
+8. Applying Logistic Regression
+○ A logistic regression classifier was implemented to model the probability of a
+binary outcome (malignant vs. benign).
+○ The model was trained on the preprocessed data and evaluated using metrics such
+as accuracy, precision, recall, and F1-score
+
+
+Exp 2
+
+Steps Performed in the Experiment
+1. Cloning the GitHub repository containing BraTS sample data and helper scripts.
+2. Installing required Python libraries, including:
+○ nibabel – to read .nii.gz MRI files.
+○ itkwidgets, ipywidgets – for interactive visualization.
+○ matplotlib – for plotting slices.
+3. Loading 3D MRI Scans:
+○ Used nibabel.load() to read a NIfTI file.
+○ Explored scan shape and dimensions.
+4. Visualizing Random Slices:
+○ Extracted and plotted a random 2D slice from the 3D volume.
+○ Used itkwidgets.view() for interactive slice navigation.
+5. Loading Ground Truth Labels:
+○ Segmentation masks provided alongside scans.
+○ Each voxel is labeled as either background, edema, or tumor.
+6. Identifying Tumor Classes:
+○ Analyzed and separated tumor regions using array slicing.
+○ Visualized each class separately using different colors.
+7. Interactive UI Widgets:
+○ Implemented toggle buttons to select and view different tumor regions
+dynamically
+
+Algo 3
+
+Steps Performed in This Experiment
+1. Importing Libraries:
+Libraries like TensorFlow, Keras, NumPy, Pandas, Matplotlib, Seaborn, Plotly, and
+Streamlit were imported to support deep learning, data handling, visualization, and web
+app creation.
+2. Loading the Dataset:
+The Pneumonia X-ray dataset was downloaded from Kaggle using the Kaggle API. The
+dataset was extracted to the local directory and structured into training, validation, and
+test folders.
+3. Visualizing Sample Images:
+Used matplotlib.pyplot.imshow() to display 10 grayscale images from the training set.
+Each image was labeled as either NORMAL or PNEUMONIA for initial inspection.
+4. Image Preprocessing:
+○ All images resized to 500×500 pixels.
+○ Normalized pixel values by dividing by 255.
+○ Converted to grayscale mode.
+5. Data Augmentation:
+○ Augmentation was used to increase dataset diversity:
+○ Rotation: 15 degrees
+○ Zoom: 0.2
+○ Shear: 0.2
+○ Horizontal Flip: Enabled
+○ Brightness Range: (1.2, 1.5)
+6. Splitting the Dataset:
+○ Dataset was already split into:
+○ Training set
+○ Validation set
+○ Test set
+○ Split was used with flow_from_directory with class_mode='binary' and
+color_mode='grayscale'.
+7. Building the CNN Model:
+○ A Sequential CNN model was constructed using the following layers:
+○ Conv2D + MaxPooling2D layers (multiple times)
+○ Flatten layer
+○ Dense layers with ReLU activation
+○ Final Dense layer with Sigmoid activation for binary classification
+8. Training the Model:
+○ Model compiled with adam optimizer and binary_crossentropy loss.
+○ Trained for 1 epoch (to save time).
+○ Used EarlyStopping and ReduceLROnPlateau as callbacks.
+○ Class weights were calculated and used to address data imbalance.
+9. Evaluating the Model:
+○ Model evaluated using model.evaluate() on test data.
+○ Confusion matrix and classification report generated using sklearn.
+○ Visualized matrix using Seaborn heatmap.
+10. Predicting and Interpreting Results:
+○ Model predicted on test set and individual images.
+○ Predictions were labeled and probabilities displayed.
+○ Example output:
+"I am 82.45% confident this is a Pneumonia case"
+○ Visualized predictions using matplotlib.
+11. Deploying as a Web App:
+○ A simple web interface was built using Streamlit.
+○ Users could upload an X-ray image and receive instant predictions.
+○ The app was hosted using ngrok for public access.
+
+
+Algo 4
+
+Algorithm / Procedure:
+1. Import dataset (Heart Disease dataset from UCI repository / Kaggle).
+2. Preprocess data:
+a. Handle missing values
+b. Encode categorical features
+c. Normalize/scale features if required
+3. Split the dataset into training and testing sets (e.g., 80:20).
+4. Apply machine learning algorithms: Logistic Regression, Decision Tree, Random Forest,
+SVM, KNN.
+5. Train models on training data.
+6. Evaluate models using accuracy, confusion matrix, precision, recall, and F1-score.
+7. Compare performance of models.
+8. Conclude with the best-performing algorithm.
+
+Algo 5
+
+. Steps in Natural Language Entity Extraction
+1. Data Collection:
+○ Use sample medical text or reports (e.g., doctor’s notes, prescriptions).
+2. Text Preprocessing:
+○ Clean the text: remove unnecessary characters, punctuation, or stopwords.
+○ Tokenize text into words or sentences.
+3. Load NLP Model:
+○ Load spaCy or scispaCy model (en_core_sci_sm) that is trained for NER.
+4. Process Text:
+○ Apply the model to the medical text using nlp(text) command.
+5. Entity Extraction:
+○ Extract entities like diseases, medications, and tests using doc.ents.
+6. Label Mapping:
+○ Each extracted entity has a label (e.g., DISEASE, CHEMICAL).
+7. Output Structuring:
+○ Store results in a structured format such as JSON, CSV, or a Python dictionary for
+further analysis.
+
+Algo 6
+The working process of this experiment follows a systematic ML pipeline:
+1. Data Collection and Loading
+The dataset is uploaded and loaded using pandas for further processing.
+2. Data Preprocessing
+○ Checking dataset shape, data types, and missing values.
+○ Handling null or irrelevant columns (e.g., patient name).
+○ Separating input features (X) and target label (Y = disease status).
+3. Exploratory Data Analysis (EDA)
+○ Visualizing distributions of features using histograms and bar plots.
+○ Identifying correlations between patient attributes and disease presence.
+4. Data Splitting
+○ The dataset is divided into training and testing sets (80:20 ratio) to ensure
+unbiased evaluation.
+5. Model Training
+○ Two ML algorithms are trained:
+■ Logistic Regression: Predicts disease risk using linear relationships
+between variables.
+■ Random Forest Classifier: Combines multiple decision trees for better
+accuracy and handling of complex data.
+6. Prediction and Evaluation
+○ Predictions are made on test data.
+○ Performance metrics like Accuracy, Confusion Matrix, and ROC-AUC Curve are
+computed.
+7. Result Comparison
+○ The results of Logistic Regression and Random Forest are compared to identify
+the best-performing model for disease risk prediction
+
+
+Algo 7
+
+The working of this experiment involves the following steps:
+1. Data Collection
+Social media reviews related to medicine or healthcare are collected from platforms or
+datasets.
+2. Data Preprocessing
+○ Removing special characters, URLs, numbers, and stopwords.
+○ Tokenizing sentences into words.
+○ Applying stemming or lemmatization.
+3. Feature Extraction
+○ Converting text into numerical form using Bag of Words (BoW) or TF-IDF.
+4. Sentiment Analysis
+○ Using models like VADER, TextBlob, or Logistic Regression to classify reviews
+as positive, negative, or neutral.
+5. Visualization of Results
+○ Bar graphs or pie charts are used to represent sentiment distribution.
+6. Evaluation
+○ Accuracy, precision, and recall are calculated to evaluate the model’s
+performance.Applications
+
