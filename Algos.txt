@@ -1,0 +1,222 @@
+1⃣ Experiment 1 — Breast Cancer Detection
+
+Algorithm: Logistic Regression
+
+Steps:
+
+Import libraries (pandas, numpy, matplotlib, seaborn)
+
+Load Breast Cancer Dataset
+
+Check shape & dataset info
+
+Handle missing values
+
+Encode categorical data
+
+Correlation heatmap
+
+Split data (Train/Test)
+
+Feature scaling (StandardScaler)
+
+Train Logistic Regression
+
+Evaluate model (Accuracy, Precision, Recall)
+
+2⃣ Experiment 2 — MRI Brain Tumor (EDA)
+
+Algorithm: No ML model — EDA + Image Visualization
+
+Steps:
+
+Install & import nibabel, itkwidgets
+
+Load BraTS dataset (.nii MRI files)
+
+Explore dataset dimensions
+
+Visualize random MRI slices
+
+Load segmentation mask
+
+Display tumor regions (edema, core, enhancing tumor)
+
+UI widget for interactive view
+
+3⃣ Experiment 3 — Pneumonia Detection (X-Ray)
+
+Algorithm: CNN (Convolutional Neural Network)
+
+Steps:
+
+Import TensorFlow, Keras, numpy, matplotlib
+
+Load Pneumonia X-ray dataset (Kaggle)
+
+Preprocess images (resize, normalize, grayscale)
+
+Data Augmentation
+
+Build CNN model:
+
+Conv2D + ReLU
+
+MaxPooling
+
+Flatten
+
+Dense layers
+
+Sigmoid output
+
+Train model
+
+Evaluate model (Confusion Matrix, Accuracy)
+
+Streamlit Web App Deployment
+
+4⃣ Experiment 4 — Heart Disease Prediction
+
+Algorithms:
+
+Logistic Regression
+
+Decision Tree
+
+Random Forest ✅ Best
+
+SVM
+
+KNN
+
+Steps:
+
+Load heart disease dataset
+
+Preprocess (missing values, encode, scale)
+
+Split Train/Test
+
+Train multiple ML models
+
+Evaluate & compare accuracy
+
+Report best model (Random Forest)
+
+5⃣ Experiment 5 — Medical Entity Extraction
+
+Algorithm: NER Model (spaCy / sciSpaCy)
+
+Steps:
+
+Import NLP libraries
+
+Load medical text report
+
+Tokenization & text cleaning
+
+Load sciSpaCy model
+
+Run NLP pipeline → Extract entities
+
+Identify: Disease, Drug, Tests
+
+Display extracted entities
+
+6⃣ Experiment 6 — Disease Risk Prediction
+
+Algorithms:
+
+Logistic Regression
+
+Random Forest ✅ Better accuracy
+
+Steps:
+
+Load patient dataset
+
+Exploratory Data Analysis
+
+Split Train/Test
+
+Train Logistic Regression & Random Forest
+
+Evaluate using accuracy + confusion matrix
+
+Compare both models
+
+Observe important features
+
+7⃣ Experiment 7 — Medical Review Sentiment Analysis
+
+Algorithms:
+
+VADER / TextBlob sentiment analysis
+
+Logistic Regression (optional classification)
+
+Steps:
+
+Load social media medical review dataset
+
+Data cleaning (remove emojis, URLs, stopwords)
+
+Tokenization
+
+Sentiment scoring (VADER/TextBlob)
+
+Classify sentiment (pos/neg/neutral)
+
+Visualize sentiment distribution
+
+8⃣ Experiment 8 — Explainable AI in Healthcare
+
+Models: Random Forest
+XAI Tools: SHAP & LIME
+
+Steps:
+
+Train Random Forest model
+
+Generate predictions
+
+Compute SHAP values
+
+Plot Local + Global SHAP graphs
+
+Use LIME for sample explanation
+
+Analyze confusion matrix
+
+Interpret results → Explainable output
+
+9⃣ Mini Project — Healthcare AI App
+
+Example Algorithms: CNN / Random Forest / NLP Model (depends on project)
+
+Steps:
+
+Dataset selection & preprocessing
+
+Model training
+
+Evaluation
+
+GUI/Web deployment (Streamlit/Flask)
+
+Testing & results
+
+Documentation + PPT
+
+Summary of All Experiments
+
+1️⃣ Breast Cancer Detection
+2️⃣ MRI Brain Tumor (EDA)
+3️⃣ Pneumonia Detection (X-Ray)
+4️⃣ Heart Disease Prediction
+5️⃣ Medical Entity Extraction
+6️⃣ Disease Risk Prediction
+7️⃣ Medical Review Sentiment Analysis
+8️⃣ Explainable AI in Healthcare
+9️⃣ Mini Project — Healthcare AI App
