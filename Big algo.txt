@@ -202,9 +202,62 @@ datasets.
 4. Sentiment Analysis
 ○ Using models like VADER, TextBlob, or Logistic Regression to classify reviews
 as positive, negative, or neutral.
+
 5. Visualization of Results
 ○ Bar graphs or pie charts are used to represent sentiment distribution.
 6. Evaluation
 ○ Accuracy, precision, and recall are calculated to evaluate the model’s
 performance.Applications
+
+Algo 8
+Here’s a *shorter, pointwise version* of your content — concise and clear for notes or presentation use:
+### *Model Interpretation Methods and Working Principles*
+
+*Types of XAI Methods:*
+
+* *Global Interpretation:* Explains entire model behavior.
+* *Local Interpretation:* Explains a single prediction.
+* *Model-Agnostic:* Works with any ML model.
+* *Model-Specific:* Works with specific models (e.g., tree-based).
+
+---
+
+### *A. SHAP (SHapley Additive exPlanations)*
+
+*Working Principle:*
+
+* Based on *Shapley values* from game theory.
+* Treats each *feature as a “player”* contributing to the prediction (“payout”).
+* Calculates each feature’s *average contribution* across all combinations.
+* Ensures *local accuracy* (sum of SHAP values = model output – base value).
+
+*Workflow:*
+
+1. *Define Explainer:* Use TreeExplainer (for tree models) or KernelExplainer (model-agnostic).
+2. *Compute SHAP Values:* Quantify feature contribution per instance/class.
+3. *Local Visualization (Force Plot):* Shows how features push prediction up (red) or down (blue).
+4. *Global Visualization (Summary/Beeswarm Plot):* Shows feature importance and direction of influence.
+
+*Advantages (Healthcare Example):*
+
+* Provides *quantified, transparent* feature contributions.
+* Supports *explainability, clinical trust, and auditability*.
+
+---
+
+### *B. LIME (Local Interpretable Model-agnostic Explanations)*
+
+*Working Principle:*
+
+* *Approximates complex models locally* with a simple, interpretable one (e.g., linear regression).
+* Focuses on *local fidelity* around a single instance.
+
+*Workflow:*
+
+1. *Select Instance:* Choose data point to explain.
+2. *Generate Perturbations:* Create modified samples by changing feature values.
+3. *Model Predictions:* Use black-box model to predict perturbed samples.
+4. *Weight Samples:* Assign higher weights to samples close to original instance.
+5. *Train Simple Model:* Fit linear model to weighted samples → coefficients = explanation.
+6. *Visualize:* Show top contributing features and their direction of influence.
 
